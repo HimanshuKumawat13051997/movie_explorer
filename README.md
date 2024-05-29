@@ -1,70 +1,77 @@
-# Getting Started with Create React App
+# Movie Explorer App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to the Movie Explorer App! This application allows users to browse through a collection of movies, view detailed information about each movie, and apply filters to find movies that match their preferences. The app is built using React and Tailwind CSS for a modern, responsive, and visually appealing design.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **Responsive Navigation Bar**: Includes a search box and a filter button.
+- **Movie Listing**: Displays a grid of movie cards with titles, release years, summaries, and poster images.
+- **Load More**: Allows users to load additional movies by clicking a "Load More" button.
+- **Filter Modal**: Provides filtering options such as genre and user ratings.
+- **Movie Detail Page**: Displays detailed information about each movie, including cast, genres, and a link to watch the trailer.
 
-### `npm start`
+## Getting Started
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Prerequisites
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Node.js
+- npm (Node Package Manager)
 
-### `npm test`
+### Installation
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Clone the repository:
 
-### `npm run build`
+   ```
+   git clone https://github.com/your-username/movie-explorer.git
+   cd movie-explorer
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+   ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+   2. Install dependencies:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+   ```
+   npm install
 
-### `npm run eject`
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+   3. Start the development server:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+   ```
+   npm start
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+   ```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+   ### Project Structure
 
-## Learn More
+   src
+   components
+   Navbar.js: Navigation bar component with search and filter functionality.
+   FilterModal.js: Modal component for applying filters.
+   MovieCard.js: Component to display individual movie cards.
+   HomePage.js: Main page component displaying the list of movies.
+   MovieDetail.js: Component for displaying detailed information about a single movie.
+   App.js: Main application component with routing configuration.
+   index.js: Entry point for the React application.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## API
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+URL: https://entertainment-app-backend-3huo.onrender.com
 
-### Code Splitting
+## Endpoints
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Retrieve all movies(GET)
 
-### Analyzing the Bundle Size
+https://entertainment-app-backend-3huo.onrender.com/extramovies
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Retrieve all movies based on search(GET)
 
-### Making a Progressive Web App
+https://entertainment-app-backend-3huo.onrender.com/extramovies/search?title="whatever"
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### Retrieve all movies based on filter(POST)
 
-### Advanced Configuration
+https://entertainment-app-backend-3huo.onrender.com/extramovies/info
+pass genres and rating body
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### Retrieve details about a single movie based on its ID.
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+https://entertainment-app-backend-3huo.onrender.com/extramovies/_id
